@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="PhotoCell" customModule="PhotoGallery" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="208" height="145"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="208" height="145"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zT2-T6-c3E">
+                        <rect key="frame" x="0.0" y="0.0" width="208" height="145"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="MF8-V6-2bg">
+                        <rect key="frame" x="0.0" y="0.0" width="208" height="145"/>
+                    </imageView>
+                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="l7R-vd-k5I">
+                        <rect key="frame" x="188" y="0.0" width="20" height="45"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Ph-fG-9Gv">
+                                <rect key="frame" x="0.0" y="0.0" width="20" height="20"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="20" id="ihf-41-tXN"/>
+                                    <constraint firstAttribute="width" constant="20" id="xX4-sM-Ea2"/>
+                                </constraints>
+                                <color key="tintColor" red="0.94509803920000002" green="0.96078431369999995" blue="0.94509803920000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" image="plus.magnifyingglass" catalog="system"/>
+                                <connections>
+                                    <action selector="didTapResizw:" destination="gTV-IL-0wX" eventType="touchUpInside" id="2BI-IE-Ofu"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vhR-Pf-Sgv">
+                                <rect key="frame" x="0.0" y="25" width="20" height="20"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="20" id="0kX-Xi-u0f"/>
+                                    <constraint firstAttribute="width" constant="20" id="dfj-cu-Kgb"/>
+                                </constraints>
+                                <color key="tintColor" red="0.94509803920000002" green="0.96078431369999995" blue="0.94509803920000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" image="viewfinder.circle" catalog="system"/>
+                                <connections>
+                                    <action selector="didTapView:" destination="gTV-IL-0wX" eventType="touchUpInside" id="BsU-z4-tCX"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                    </stackView>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstItem="zT2-T6-c3E" firstAttribute="height" secondItem="gTV-IL-0wX" secondAttribute="height" id="2QC-ho-61r"/>
+                <constraint firstItem="zT2-T6-c3E" firstAttribute="width" secondItem="gTV-IL-0wX" secondAttribute="width" id="4ng-g6-IlQ"/>
+                <constraint firstAttribute="trailing" secondItem="l7R-vd-k5I" secondAttribute="trailing" id="7bc-LM-Lpp"/>
+                <constraint firstItem="MF8-V6-2bg" firstAttribute="width" secondItem="gTV-IL-0wX" secondAttribute="width" id="D69-r9-aHn"/>
+                <constraint firstItem="zT2-T6-c3E" firstAttribute="centerY" secondItem="gTV-IL-0wX" secondAttribute="centerY" id="IHa-jz-Mp7"/>
+                <constraint firstItem="zT2-T6-c3E" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" id="dSU-Ld-bT6"/>
+                <constraint firstItem="MF8-V6-2bg" firstAttribute="centerY" secondItem="gTV-IL-0wX" secondAttribute="centerY" id="dop-tO-I4b"/>
+                <constraint firstItem="MF8-V6-2bg" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" id="lay-bX-rRq"/>
+                <constraint firstItem="l7R-vd-k5I" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="lh7-r8-f6O"/>
+                <constraint firstItem="MF8-V6-2bg" firstAttribute="height" secondItem="gTV-IL-0wX" secondAttribute="height" id="tyH-AW-pXk"/>
+            </constraints>
+            <size key="customSize" width="208" height="145"/>
+            <connections>
+                <outlet property="bgView" destination="zT2-T6-c3E" id="BWx-Uh-s0u"/>
+                <outlet property="imgView" destination="MF8-V6-2bg" id="fKo-Og-NwN"/>
+            </connections>
+            <point key="canvasLocation" x="252.17391304347828" y="152.34375"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="plus.magnifyingglass" catalog="system" width="128" height="115"/>
+        <image name="viewfinder.circle" catalog="system" width="128" height="121"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
